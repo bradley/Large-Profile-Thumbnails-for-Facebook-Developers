@@ -1,0 +1,30 @@
+Hello All. (This is my first commit, excuse me and please correct me if I have done anything foolish.)
+
+This code will generate the largest possible mimic of a Facebook thumbnail for a given user without losing resolution. The generated thumbnail is not guaranteed to be exactly the same as the real thumbnail on Facebook for the user, but it is close.
+
+Example-
+You can view an example of the code here: http://www.lessucettes.com/examples/generateThumbExample.php
+
+Required-
+You will need to have a recent version of imageMagick installed that can execute the '-subimage-search' command.
+
+Furthermore, be sure that any call to an imageMagick command, e.g.; identify or convert, contains the full path to it. For me that would be:
+$HOME/local/bin/<command> etc.
+
+
+About-
+The code compares a given thumbnail retrieved from Facebook to the smallest version of the user's profile image which is also retrieved from Facebook. 
+
+First the two images are saved temporarily locally, and processed with ImageMagick.
+
+It then stores various values that will be useful in cropping the image.
+
+Next, the temporary images are deleted from their parent directory.
+
+Lastly, and only for example's sake, the code will output a mock-crop of the image using CSS and the stored values from earlier.
+
+
+Licensing-
+If you want to use this code, I would very much appreciate you referencing my name, Bradley Griffith - @bradleygriffith on Twitter, and website, http://lessucettes.com, but you do NOT have to do any such thing.
+
+Usage, whether stated in script or not, is also subject to the ImageMagick license, which can be found at: http://www.imagemagick.org/script/license.php
